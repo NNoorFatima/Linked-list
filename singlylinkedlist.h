@@ -200,7 +200,8 @@ public:
 			prev = current;
 			current = current->next;
 		}
-		prev->next = current->next;
+		if (current->data==value)//if values found 
+			prev->next = current->next;
 		//print();
 	}
 	void print()
